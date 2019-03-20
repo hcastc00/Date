@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<project name="Sentencias de control" basedir="." default="todo">
+    <property name="src" value="src"/>
+    <property name="classes" value="classes"/>
+    <property name="conf" value="etc"/>
+
+    <property name="paquetes" value="es.unileon.prg.date"/>
+
+    <target name="clean">
+      <delete dir="${classes}"/>
+    </target>
+
+    <target name="compile" depends="clean">
+      <mkdir dir="${classes}"/>
+      <javac includeantruntime="false" srcdir="${src}" destdir="${classes}"/>
+      <echo message="Compiling...done"/>
+    </target>
+
+    <target name="run" depends="compile">
+      <java classname="es.unileon.prg.date.MainDate">
+         <classpath>
+              <pathelement path="${classes}"/>
+         </classpath>
+      </java>
+    </target>
+
+    <target name="todo" depends="run"/>
+
+</project>
