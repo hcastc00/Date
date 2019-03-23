@@ -355,12 +355,10 @@ public class Date {
 	}
 
 
-	//esta mal, revisar
 	public int attemptsToGuessDate(){
-		int randomDay = 0, randomMonth = 0, intentos = 0;
-		while(this.day!=randomDay && this.month!=randomMonth){
-			randomDay = (int)(Math.random() * ((31 - 1) + 1)) + 1;
-			randomMonth = (int)(Math.random() * ((12 - 1) + 1)) + 1;
+		int randomDay = 0, intentos = 0;
+		while(this.daysSinceYearBeginning()!=randomDay){
+			randomDay = (int)(Math.random() * ((365 - 1) + 1)) + 1;
 			intentos++;
 		}
 		return intentos;
