@@ -7,7 +7,7 @@ public class MainDate {
 		Date today;
 
 		try {
-			today = new Date(12, 04, 2017);
+			today = new Date(02, 05, 2019);
 			System.out.println(today.toString());
 			System.out.println(today.printMonthName());
 			System.out.println(today.printSeasonOfMonth());
@@ -15,8 +15,12 @@ public class MainDate {
 			System.out.println(today.dateToString());
 			System.out.println(today.printDatesToEndMonth());
 			System.out.println(today.printMonthsWhithSameDays());
-			System.out.println("Desde el inicio del año han pasado "+today.daysSinceYearBeginning());
+			System.out.println("Desde el inicio del año han pasado "+today.daysSinceYearBeginning()+" días");
 			System.out.println("Se han realizado "+today.attemptsToGuessDate()+" intentos para acertar la fecha.");
+			System.out.println("Se han realizado "+today.attemptsToGuessDateDoWhile()+" intentos para acertar la fecha.");
+			int primerDiaAnio = 1;
+			System.out.println(today.dayOfTheWeek(primerDiaAnio));
+
 		} catch (DateException e) {
 			System.out.println(e.getMessage());
 		}
