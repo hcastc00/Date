@@ -353,8 +353,7 @@ public class Date {
 				case 5: //next
 				case 7: //next
 				case 8: //next
-				case 10: //next
-				case 12:
+				case 10:
 					daysInMonth = 31;
 					break;
 				
@@ -428,7 +427,5 @@ public class Date {
 		}
 
 		return salida.toString();
-
-
 	}
 }
